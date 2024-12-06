@@ -1,0 +1,55 @@
+.payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h2, .payment-container h3, .flight-summary h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flight-summary {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.payment-button:hover {
+    background-color: #45a049;
+}
+

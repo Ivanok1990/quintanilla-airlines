@@ -1,0 +1,175 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('http://localhost:8080/imagenes/Managua.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.auth-container {
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a90e2;
+    letter-spacing: 1.5px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f7f7f7;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+    border-color: #4a90e2;
+    background-color: #fff;
+}
+
+input[type="file"] {
+    padding: 8px;
+}
+
+button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success-message,
+.error-message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    animation: fadeInMessage 0.7s ease-in-out;
+}
+
+.success-message {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: #fff;
+}
+
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.forgot-password {
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

@@ -1,0 +1,156 @@
+.Container-FlightList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Se adapta mejor para pantallas pequeñas */
+    width: 100%;
+    background-image: url('http://localhost:8080/imagenes/backGround2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 20px; /* Espaciado adicional para pantallas más pequeñas */
+    box-sizing: border-box;
+}
+
+.no-flights-message {
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em; /* Ajusta el tamaño relativo */
+}
+
+.flight-list {
+    max-width: 90%; /* Usa un ancho relativo */
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(0.98);
+    transition: all 0.3s ease-in-out;
+}
+
+.flight-list:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.flight-list h3 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Ajusta tamaño responsivo */
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: fadeInDown 0.5s ease-out;
+}
+
+.flight-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.flight-list th, .flight-list td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95em; /* Ajusta tamaño relativo */
+}
+
+.flight-list th {
+    background-color: #3f51b5;
+    color: #fff;
+    font-weight: bold;
+}
+
+.flight-list td {
+    color: #333;
+}
+
+.flight-list tr:hover {
+    background-color: #f9f9f9;
+    transition: background 0.3s;
+}
+
+.flight-list input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.flight-list button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1em; /* Ajusta tamaño relativo */
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4a90e2 0%, #6a11cb 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flight-list button:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #4a90e2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.flight-list button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .flight-list {
+        padding: 15px;
+    }
+
+    .flight-list h3 {
+        font-size: 1.5em;
+    }
+
+    .flight-list th, .flight-list td {
+        font-size: 0.9em;
+    }
+
+    .flight-list button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Container-FlightList {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .flight-list {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .flight-list h3 {
+        font-size: 1.3em;
+    }
+
+    .flight-list th, .flight-list td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .flight-list button {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}

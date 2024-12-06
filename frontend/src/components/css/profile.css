@@ -1,0 +1,197 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('http://localhost:8080/imagenes/Managua.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Mensaje superior */
+.help-text {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    max-width: 80%;
+}
+
+/* Tarjeta del perfil */
+.auth-container {
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px; /* Separación entre perfil y chat */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título del perfil */
+h2 {
+    font-size: 24px;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Imagen del perfil */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #4a90e2;
+    transition: transform 0.3s;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+}
+
+/* Información del usuario */
+.profile-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.profile-info p strong {
+    color: #4a90e2;
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.logout-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección del chat */
+.chat-section {
+    width: 100%;
+    max-width: 600px;
+}
+.chat-section h3{
+    color:bisque;
+}
+
+/* Contenedor del chat */
+.chat-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+/* Título del chat */
+.chat-container h3 {
+    font-size: 18px;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Mensajes del chat */
+.messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.messages p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Entrada y botón de enviar */
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-section button {
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-section button:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}

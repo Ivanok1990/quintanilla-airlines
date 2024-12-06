@@ -1,0 +1,182 @@
+.Container-FlightOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+    background-image: url('http://localhost:8080/imagenes/Background2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Estilo principal del contenedor */
+.Container-FlightOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Título */
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de contenedor para las opciones */
+.options-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Tarjeta de opción */
+.option-card {
+    width: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card.selected {
+    border: 2px solid #4a90e2;
+}
+
+/* Etiqueta "Most Popular" */
+.option-card.popular::after {
+    content: 'Most popular';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ffd700;
+    color: #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* Título de la tarjeta */
+.option-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Lista de características de la tarjeta */
+.option-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.option-card ul li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Precio de la tarjeta */
+.option-card .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+    text-align: left;
+}
+
+/* Estilo para la opción de equipaje adicional */
+.additional-options {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.additional-options label {
+    display: inline-block;
+    background: #f8f8f8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 0.9em;
+}
+
+.additional-options label:hover {
+    background: #e0e0e0;
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cancel-button, .continue-button {
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cancel-button {
+    background: #ccc;
+    color: #333;
+}
+
+.cancel-button:hover {
+    background: #bbb;
+}
+
+.continue-button {
+    background: #4a90e2;
+    color: #fff;
+}
+
+.continue-button:hover {
+    background: #357ab7;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .option-card {
+        width: 90%;
+    }
+}
